@@ -18,7 +18,7 @@ _This console application prompts the user to enter a sentence for the applicati
 
 ## Setup/Installation Requirements
 
-* _Clone the following github repository to view the code https://github.com/LisaMJensen/cs-bakery  ._
+* _Clone the following github repository to view the code https://github.com/LisaMJensen/Word-Counter  ._
 
 * _Open the application in your console and follow the prompts it gives._
 
