@@ -9,16 +9,16 @@ namespace WordCounter.Tests
         [TestMethod]
         public void WordCounter_IsWord_Word()
         {
-            CounterClass newCounterClass = new CounterClass("word", "");
-            Assert.AreEqual(typeof(CounterClass), newCounterClass.GetType());
+            RepeatCounter newRepeatCounter = new RepeatCounter("word", "");
+            Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
         }
 
         [TestMethod]
         public void GetWord_ReturnWord_WordString()
         {
             string inputWord = "word";
-            CounterClass newCounterClass = new CounterClass(inputWord, "");
-            string result = newCounterClass.GetWord();
+            RepeatCounter newRepeatCounter = new RepeatCounter(inputWord, "");
+            string result = newRepeatCounter.GetWord();
             Assert.AreEqual(inputWord, result);
         }
 
@@ -26,8 +26,8 @@ namespace WordCounter.Tests
         public void GetSentence_ReturnSentence_SentenceString()
         {
             string inputSentence = "This is a sentence.";
-            CounterClass newCounterClass = new CounterClass("", inputSentence);
-            string result = newCounterClass.GetSentence();
+            RepeatCounter newRepeatCounter = new RepeatCounter("", inputSentence);
+            string result = newRepeatCounter.GetSentence();
             Assert.AreEqual(inputSentence, result);
         }
     }
