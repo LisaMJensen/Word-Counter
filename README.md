@@ -14,6 +14,7 @@ _This console application prompts the user to enter a sentence for the applicati
 | User inputs the sentence for which they want words counted.   | "This is a sentence." | "(This is a sentence.)" |
 | The application returns the number of times a word appears in the string. | Input: "sentence", Input: "This is a sentence." | "The word 'sentence' was found 1 time" |
 | The application returns the number of times a word appears in a sentence regardless of lower or uppercases. | Input: "Sentence", Input: "This is a sentence." | "The word 'sentence' was found 1 time" |
+| The application returns the number of times a word appears in the string regardless of lowercase, uppercase, or special characters such as !, ?, ., etc.    | Input: "dog", Input: "My dog is the best dog!" | "The word 'dog' was found 2 times" |
 
 ## Setup/Installation Requirements
 

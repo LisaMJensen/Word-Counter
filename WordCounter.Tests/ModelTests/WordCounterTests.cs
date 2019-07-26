@@ -13,18 +13,22 @@ namespace WordCounter.Tests
             Assert.AreEqual(typeof(CounterClass), newCounterClass.GetType());
         }
 
-        // [TestMethod]
-        // public void MethodName_Spec_ExpectedOutput()
-        // {
-        //     ClassName instanceName = new ClassName();
-        //     Assert.AreEqual(ExpectedOutput, instanceName.MethodName(inputHere));
-        // }
+        [TestMethod]
+        public void GetWord_ReturnWord_WordString()
+        {
+            string inputWord = "word";
+            CounterClass newCounterClass = new CounterClass(inputWord, "");
+            string result = newCounterClass.GetWord();
+            Assert.AreEqual(inputWord, result);
+        }
 
-        // [TestMethod]
-        // public void MethodName_Spec_ExpectedOutput()
-        // {
-        //     ClassName instanceName = new ClassName();
-        //     Assert.AreEqual(ExpectedOutput, instanceName.MethodName(inputHere));
-        // }
+        [TestMethod]
+        public void GetSentence_ReturnSentence_SentenceString()
+        {
+            string inputSentence = "This is a sentence.";
+            CounterClass newCounterClass = new CounterClass("", inputSentence);
+            string result = newCounterClass.GetSentence();
+            Assert.AreEqual(inputSentence, result);
+        }
     }
 }
