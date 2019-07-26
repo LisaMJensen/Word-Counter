@@ -9,7 +9,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void MethodName_Spec_ExpectedOutput()
         {
-            ClassName instanceName = new ClassName();
+            CounterClass newCounterClass = new CounterClass();
             Assert.AreEqual(ExpectedOutput, instanceName.MethodName(inputHere));
         }
 
