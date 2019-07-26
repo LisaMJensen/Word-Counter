@@ -7,38 +7,38 @@ namespace WordCounter.Models
     {
         public string Word { get; set; }
         public string Sentence { get; set; }
-        
 
-    public CounterClass(string inputWord, string inputSentence)
-    {
-        Word = inputWord;
-        Sentence = inputSentence;
-    }
 
-    public string GetWord()
-    {
-        return Word;
-    }
-
-    public string GetSentence()
-    {
-        return Sentence;
-    }
-
-    public int WordCount()
-    {
-        int count = 0;
-        string toLowerCaseWord = Word.ToLower();
-        string toLowerCaseSentence = Sentence.ToLower();
-        string[] sentenceWords = toLowerCaseSentence.Split(" ");
-        foreach(var element in sentenceWords)
+        public CounterClass(string inputWord, string inputSentence)
         {
-            if(toLowerCaseWord == element)
-            {
-                count++;
-            }
+            Word = inputWord;
+            Sentence = inputSentence;
         }
-        return count;
-    }
+
+        public string GetWord()
+        {
+            return Word;
+        }
+
+        public string GetSentence()
+        {
+            return Sentence;
+        }
+
+        public int WordCount()
+        {
+            int count = 0;
+            string toLowerCaseWord = Word.ToLower();
+            string toLowerCaseSentence = Sentence.ToLower();
+            string[] sentenceWords = toLowerCaseSentence.Split(' ', '.', ',', '?', '!', '/', ';', ':', '"');
+            foreach (var element in sentenceWords)
+            {
+                if (toLowerCaseWord == element)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
     }
 }
