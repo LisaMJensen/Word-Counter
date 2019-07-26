@@ -13,7 +13,9 @@ namespace WordCounter
             string Word = Console.ReadLine();
             Console.WriteLine("Please enter a sentence that uses that word at least once.");
             string Sentence = Console.ReadLine();
-            CounterClass NeedsCount = new CounterClass(Word, Sentence);
+            RepeatCounter NeedsCount = new RepeatCounter(Word, Sentence);
+            NeedsCount.ValidInputCheck(Word);
+            NeedsCount.ValidInputCheck(Sentence);
             Console.WriteLine("Your sentence contains the word " + Word + " " + NeedsCount.WordCount() + " time(s).");
 
         }
