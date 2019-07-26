@@ -3,17 +3,18 @@ using System;
 namespace WordCounter.Models
 {
 
-    public class CounterClass
+    public class RepeatCounter
     {
         public string Word { get; set; }
         public string Sentence { get; set; }
 
 
-        public CounterClass(string inputWord, string inputSentence)
+        public RepeatCounter(string inputWord, string inputSentence)
         {
             Word = inputWord;
             Sentence = inputSentence;
         }
+
 
         public string GetWord()
         {
@@ -24,6 +25,17 @@ namespace WordCounter.Models
         {
             return Sentence;
         }
+        public bool ValidInputCheck(string input)
+        {
+            if (string.IsNullOrEmpty(Word) && string.IsNullOrEmpty(Sentence))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public int WordCount()
         {
@@ -31,9 +43,9 @@ namespace WordCounter.Models
             string toLowerCaseWord = Word.ToLower();
             string toLowerCaseSentence = Sentence.ToLower();
             string[] sentenceWords = toLowerCaseSentence.Split(' ', '.', ',', '?', '!', '/', ';', ':', '"');
-            foreach (var element in sentenceWords)
+            foreach (string invidualWords in sentenceWords)
             {
-                if (toLowerCaseWord == element)
+                if (toLowerCaseWord == invidualWords)
                 {
                     count++;
                 }
